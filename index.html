@@ -158,22 +158,22 @@
                 <div class="nama-kandidat">CALON NOMOR 3</div>
             </div>
 
-            <!-- Kandidat 4 -->
-            <div class="kandidat-card" onclick="pilihKandidat(4, 'CALON NOMOR 4', true)">
+            <!-- Kandidat 4 (SETO MULYONO) -->
+            <div class="kandidat-card" onclick="pilihKandidat(4, 'SETO MULYONO', true)">
                 <div class="foto-container">
                     <div class="nomor-urut">4</div>
-                    <img src="image/02.png" class="foto-kandidat" alt="Foto Calon 4">
-                </div>
-                <div class="nama-kandidat">CALON NOMOR 4</div>
-            </div>
-
-            <!-- Kandidat 5 (SETO MULYONO) -->
-            <div class="kandidat-card" onclick="pilihKandidat(5, 'SETO MULYONO', true)">
-                <div class="foto-container">
-                    <div class="nomor-urut">5</div>
                     <img src="image/calon.jpeg" class="foto-kandidat" alt="Foto SETO MULYONO">
                 </div>
                 <div class="nama-kandidat">SETO MULYONO</div>
+            </div>
+
+            <!-- Kandidat 5 -->
+            <div class="kandidat-card" onclick="pilihKandidat(5, 'CALON NOMOR 5', true)">
+                <div class="foto-container">
+                    <div class="nomor-urut">5</div>
+                    <img src="image/02.png" class="foto-kandidat" alt="Foto Calon 5">
+                </div>
+                <div class="nama-kandidat">CALON NOMOR 5</div>
             </div>
 
         </div>
@@ -209,8 +209,8 @@
                 <div class="bg-blur-card"><img src="image/02.png" class="foto-kandidat" alt="Blur 1"></div>
                 <div class="bg-blur-card"><img src="image/02.png" class="foto-kandidat" alt="Blur 2"></div>
                 <div class="bg-blur-card"><img src="image/02.png" class="foto-kandidat" alt="Blur 3"></div>
-                <div class="bg-blur-card"><img src="image/02.png" class="foto-kandidat" alt="Blur 4"></div>
-                <div class="bg-blur-card"><img src="image/calon.jpeg" class="foto-kandidat" alt="Blur 5"></div>
+                <div class="bg-blur-card"><img src="image/calon.jpeg" class="foto-kandidat" alt="Blur 4"></div>
+                <div class="bg-blur-card"><img src="image/02.png" class="foto-kandidat" alt="Blur 5"></div>
             </div>
         </div>
 
@@ -247,9 +247,9 @@
 
         let fotoHTML = '';
         
-        if (kandidatTerpilih.nomor === 5) {
+        if (kandidatTerpilih.nomor === 4) {
             fotoHTML = `<img src="image/calon.jpeg" alt="Foto SETO MULYONO" style="width: 130px; height: 160px; border-radius: 10px; border: 3px solid #e74c3c; margin-bottom: 12px; object-fit: cover; object-position: top;">`;
-        } else if (kandidatTerpilih.nomor >= 1 && kandidatTerpilih.nomor <= 4) {
+        } else if ((kandidatTerpilih.nomor >= 1 && kandidatTerpilih.nomor <= 3) || kandidatTerpilih.nomor === 5) {
             fotoHTML = `<img src="image/02.png" alt="Foto Calon" style="width: 130px; height: 160px; border-radius: 10px; border: 3px solid #e74c3c; margin-bottom: 12px; object-fit: cover; object-position: top;">`;
         } else {
             fotoHTML = `
